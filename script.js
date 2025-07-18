@@ -46,10 +46,11 @@ function restoreState(dataURL) {
 }
 
 [penTool, rectTool, circleTool].forEach(btn => {
-  btn.addEventListener("click", () => {
-    tool = btn.id.split("-")[0];
+  btn.addEventListener("click", (e) => {
+    const button = e.currentTarget;
+    tool = button.id.split("-")[0];
     document.querySelectorAll(".toolbar button").forEach(b => b.classList.remove("active"));
-    btn.classList.add("active");
+    button.classList.add("active");
     isEraser = false;
     eraserBtn.textContent = "Eraser";
   });
