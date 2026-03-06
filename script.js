@@ -47,6 +47,7 @@ function restoreState(dataURL) {
 
 [penTool, rectTool, circleTool].forEach(btn => {
   btn.addEventListener("click", (e) => {
+    
     const button = e.currentTarget;
     tool = button.id.split("-")[0];
     document.querySelectorAll(".toolbar button").forEach(b => b.classList.remove("active"));
