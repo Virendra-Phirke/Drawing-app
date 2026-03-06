@@ -167,6 +167,7 @@ function draw(e) {
 }
 
 function endDraw() {
+  
   isDrawing = false;
   ctx.beginPath();
   saveState();
