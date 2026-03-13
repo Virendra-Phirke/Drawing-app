@@ -102,8 +102,10 @@ undoBtn.addEventListener("click", () => {
 
 redoBtn.addEventListener("click", () => {
   if (redoStack.length > 0) {
+    
     undoStack.push(canvas.toDataURL());
     restoreState(redoStack.pop());
+    
   }
 });
 
